@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login DynamoDB LocalStack</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 20px; }
+        input[type="text"], input[type="password"] { width: 90%; padding: 10px; margin: 5px 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; border-radius: 4px; }
+        button:hover { opacity: 0.8; }
+        .status { margin-top: 15px; padding: 10px; border-radius: 4px; }
+        .success { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+        .info { background-color: #d1ecf1; color: #0c5460; border-color: #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Login Local</h1>
+
+    <h2>Cadastrar Novo Usuário</h2>
+    <input type="text" id="cadLogin" placeholder="Login / E-mail">
+    <input type="password" id="cadSenha" placeholder="Senha">
+    <button onclick="cadastrarUsuario()">Cadastrar</button>
+    <div id="statusCadastro" class="status info">Aguardando cadastro...</div>
+
+    <h2>Fazer Login</h2>
+    <input type="text" id="logLogin" placeholder="Login / E-mail">
+    <input type="password" id="logSenha" placeholder="Senha">
+    <button onclick="fazerLogin()">Entrar</button>
+    <div id="statusLogin" class="status info">Aguardando login...</div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1587.0.min.js"></script>
+    <script src="app-login.js"></script>
+</body>
+</html>
